@@ -10,7 +10,7 @@ export default function Home() {
             {/* <Navbar /> */}
             <div className='flex items-center' style={{ height: '82vh' }}>
                 <div id='home' className='w-full  mt-10'>
-                    <div className='flex justify-center flex-col lg:flex-row md:flex-col-reverse sm:flex-col-reverse xs:flex-col-reverse leading-loose items-center w-screen my-auto px-5'>
+                    <div className='flex justify-center flex-col-reverse lg:flex-row md:flex-col-reverse sm:flex-col-reverse xs:flex-col-reverse leading-loose items-center w-screen my-auto px-5'>
                         <div className='p-3 w-full lg:w-1/3'>
                             <div className='text-center p-3 flex flex-wrap justify-center'>
                                 <div>
