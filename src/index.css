@@ -1,9 +1,12 @@
+
+/* index.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-.glow{
+/* .glow{
     box-shadow: 0px 0px 9px #d4c1c1;
     transition: box-shadow 0.3s ease;
 }
@@ -23,8 +26,6 @@
 }
 .fade-in {
     animation: fadeIn 1.5s ease forwards;
-}
+} */
 
-.bgi{
-    background-image: url('/portfolio/public/bg3.jpg');
-}
+
