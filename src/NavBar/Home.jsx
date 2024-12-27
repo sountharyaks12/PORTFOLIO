@@ -1,11 +1,58 @@
-import React from 'react';
-import { FaGithub } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
+import { Link } from 'react-scroll';
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
+      <div className="flex justify-between items-center text-white px-4 bg-[#5F4E4A] h-16">
+        <a href="/" className="text-lg font-bold">Dev by Sountharya</a>
+        <div className="hidden md:flex space-x-4">
+          {/* <Link to="home" smooth={true} duration={500} className="cursor-pointer">Home</Link> */}
+          <Link to="about" smooth={true} duration={500} className="cursor-pointer">About</Link>
+          <Link to="skills" smooth={true} duration={500} className="cursor-pointer">Skills</Link>
+          <Link to="projects" smooth={true} duration={500} className="cursor-pointer">Projects</Link>
+          <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link>
+        </div>
+        <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div
+        className={`md:hidden bg-[#5F4E4A] text-white ${
+          isOpen ? 'block' : 'hidden'
+        }`}
+      >
+        <div className="flex flex-col space-y-4 p-4">
+          <Link to="home" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Home</Link>
+          <Link to="about" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>About</Link>
+          <Link to="skills" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Skills</Link>
+          <Link to="projects" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Projects</Link>
+          <Link to="contact" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Contact</Link>
+        </div>
+      </div>
+
       <div className="flex items-center h-[82vh] animate-fadeInUp sm:animate-none">
         <div id="home" className="w-full mt-10">
           <div className="flex justify-center flex-col-reverse lg:flex-row md:flex-col-reverse sm:flex-col-reverse xs:flex-col-reverse leading-loose items-center w-screen my-auto px-5">

@@ -9,7 +9,7 @@ import Projects from './NavBar/Projects'
 export default function App() {
   return (
     <div className='bg-[#d6d0ca]' >
-      <Navbar />
+      {/* <Navbar /> */}
       <Home />
       <About />
       <Contact />
