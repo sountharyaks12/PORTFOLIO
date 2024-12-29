@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="text-right p-1 w-3/4 xs:mx-auto mt-6">
+              {/* <div className="text-right p-1 w-3/4 xs:mx-auto mt-6">
                 <div className="flex justify-around items-center rounded-full text-4xl bg-emerald-100 p-5 mx-5 glow hover:scale-110 transform transition-all duration-300">
                   <a href="https://github.com/sountharyaks12" aria-label="GitHub" role="img">
                     <FaGithub />
@@ -85,7 +85,30 @@ export default function Home() {
                     <IoMdMail />
                   </a>
                 </div>
-              </div>
+              </div> */}
+
+
+<div className="text-center p-1 w-full xs:mx-auto mt-6">
+  <div className="flex flex-col xs:flex-row justify-center items-center gap-4 xs:gap-6">
+    {/* GitHub Icon */}
+    <a href="https://github.com/sountharyaks12" aria-label="GitHub" role="img" className="p-4 bg-slate-100 text-black rounded-full text-3xl xs:text-4xl shadow-lg hover:bg-emerald-950 hover:text-white hover:shadow-xl hover:scale-110">
+      <FaGithub />
+    </a>
+    
+    {/* LinkedIn Icon */}
+    <a href="https://www.linkedin.com/in/sountharya-k-s-604a9b282/" aria-label="LinkedIn" role="img" className="p-4 bg-cyan-100 rounded-full text-3xl xs:text-4xl text-black shadow-lg hover:text-white hover:bg-blue-950 hover:shadow-2xl transition-all duration-300 transform hover:scale-110">
+      <FaLinkedin />
+    </a>
+    
+    {/* Email Icon */}
+    <a href="mailto:ssountharya71@gmail.com" aria-label="Email" role="img" className="p-4 bg-slate-100 rounded-full text-3xl xs:text-4xl text-black shadow-lg hover:bg-orange-950 hover:text-white hover:shadow-2xl transition-all duration-300 transform hover:scale-110">
+      <IoMdMail />
+    </a>
+  </div>
+</div>
+
+
+
             </div>
             <div className="mr-5 p-10 animate-slideRight sm:animate-fadeInUp">
               <img src="/i.JPG" className="rounded-full h-48 w-48" alt="Profile pic" />

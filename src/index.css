@@ -5,27 +5,71 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* .glow{
-    box-shadow: 0px 0px 9px #d4c1c1;
-    transition: box-shadow 0.3s ease;
-}
-.glow:hover{
-    box-shadow: 0px 0px 30px #8b6f6f;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-80px);
+/* Projects */
+@layer utilities {
+    .perspective {
+      perspective: 1000px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+  
+    .flip-card-inner:hover {
+        cursor: pointer;
+      transform: rotateY(180deg);
+    }
+  
+    .flip-card-front,
+    .flip-card-back {
+      backface-visibility: hidden;
+      border-radius: 20px;
+    }
+ 
+     .flip-card-back { 
+      transform: rotateY(180deg);
+      background-color: rgb(131, 84, 84);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 }
-.fade-in {
-    animation: fadeIn 1.5s ease forwards;
-} */
+  
+  .flip-card {
+    perspective: 1000px; 
+}
 
+.flip-card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.6s; 
+}
 
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); 
+}
+
+.flip-card-front {
+    animation: up 2.3s infinite; 
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+    background-size: 100% 200%; 
+    border-radius: 10px; 
+    /* height: 200px; */
+    /* width: 150px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+@keyframes up {
+    0% {
+        background-position: top; 
+    }
+    50% {
+        background-position:center ; 
+    }
+    100% {
+        background-position: bottom ; 
+    }
+}
+
+  
