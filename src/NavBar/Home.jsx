@@ -339,7 +339,7 @@ export default function Home() {
  </div>
               </div>
 
-              <div className="text-center p-1 w-full xs:mx-auto mt-6">
+              <div className="text-center p-1 w-full xs:-mx-3 mt-6">
                 <div className="flex flex-col xs:flex-row justify-center items-center gap-4 xs:gap-6">
                   <a href="https://github.com/sountharyaks12" aria-label="GitHub" role="img" className="p-4 bg-slate-100 text-black rounded-full text-3xl xs:text-4xl shadow-lg hover:bg-emerald-950 hover:text-white hover:shadow-xl hover:scale-110">
                     <FaGithub />
