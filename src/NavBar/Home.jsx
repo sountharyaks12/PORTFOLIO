@@ -266,7 +266,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:mt-24 lg:w-2/3 flex justify-center">
+            <div className="w-full sm:mr-24 lg:mt-0 lg:w-2/3 flex justify-center">
               <img src="i.JPG" alt="Sountharya" className="rounded-full w-48 h-48 object-cover" />
             </div>
           </div>
