@@ -8,7 +8,7 @@ import { IoServer, IoSettings } from 'react-icons/io5'
 export default function Skills() {
   return (
     <div className='flex justify-center '>
-    <div id='skills' className=' border-2 border-red-950 rounded-lg m-16 w-3/4 p-5 '>
+    <div id='skills' className=' border-2 border-red-950 rounded-lg m-4 mt-6 md:m-16  p-5 '>
     
       <h1 className='text-3xl text-center mt-10 font-bold'>Skills</h1>
 <h1 className='m-6 text-xl font-semibold '>MERN Full-Stack Development</h1>
