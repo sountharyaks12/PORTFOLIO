@@ -1,4 +1,4 @@
-// import { div } from 'framer-motion/client'
+//NavBar/Skills.jsx
 import React from 'react'
 import { FaGlobe } from 'react-icons/fa'
 import { FaWandMagicSparkles } from 'react-icons/fa6'

@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .flip-card {
+      width: 100%;
+  }}
+
+
 /* Projects */
 @layer utilities {
     .perspective {
@@ -51,8 +58,6 @@
     background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
     background-size: 100% 200%; 
     border-radius: 10px; 
-    /* height: 200px; */
-    /* width: 150px; */
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,3 +1,5 @@
+
+//App.jsx
 import React from 'react'
 import Navbar from './NavBar/Navbar'
 import Home from './NavBar/Home'
@@ -9,7 +11,6 @@ import Projects from './NavBar/Projects'
 export default function App() {
   return (
     <div className='bg-[#d6d0ca]' >
-      {/* <Navbar /> */}
       <Home />
       <About />
       <Skills />

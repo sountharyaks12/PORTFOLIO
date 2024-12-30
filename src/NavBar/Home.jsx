@@ -1,3 +1,5 @@
+
+//NavBar/Home.jsx
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
