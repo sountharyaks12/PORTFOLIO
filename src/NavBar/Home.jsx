@@ -22,7 +22,7 @@ export default function Home() {
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer">Projects</Link>
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link>
           <button className="text-white font-medium hover:text-indigo-400 hover:scale-105">
-            <a href="/Sountharya_Resume_(1)" download>Download Resume</a>
+            <a href="/Sountharya_Resume_(1)" download='react resume' >Download Resume</a>
           </button>
         </div>
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
@@ -53,7 +53,7 @@ export default function Home() {
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Contact</Link>
           <button className="bg-pink-950 flex items-center justify-between text-white font-medium py-2 px-4 rounded-lg w-fit">
             <IoCloudDownload className="mr-2" />
-            <a href="/Sountharya_Resume_(1)" download>Download My Resume</a>
+            <a href="/Sountharya_Resume_(1)" download='react resume' >Download My Resume</a>
           </button>
         </div>
       </div>

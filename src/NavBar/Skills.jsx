@@ -23,13 +23,13 @@ export default function Skills() {
     {
       icon: <IoSettings />,
       title: 'Programming Language',
-      description: 'Core technology for building scalable solutions:',
-      items: ['JavaScript (ES6+)'],
+      description: 'Core technology',
+      items: ['JavaScript'],
     },
     {
       icon: <IoServer />,
       title: 'Database Management',
-      description: 'Experienced in managing databases with:',
+      description: 'Knowledge of CRUD operations in',
       items: ['MongoDB'],
     },
     {
@@ -40,9 +40,9 @@ export default function Skills() {
     },
     {
       icon: <FaWandMagicSparkles />,
-      title: 'Other Skills',
+      // title: 'Skills',
       description: 'Additionally skilled in:',
-      items: ['Responsive Web Design', 'Cross-Browser Compatibility'],
+      items: ['Responsive Web Design'],
     },
   ];
 
