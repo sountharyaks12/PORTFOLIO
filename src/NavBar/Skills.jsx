@@ -40,7 +40,6 @@ export default function Skills() {
     },
     {
       icon: <FaWandMagicSparkles />,
-      // title: 'Skills',
       description: 'Additionally skilled in:',
       items: ['Responsive Web Design'],
     },
@@ -72,8 +71,8 @@ export default function Skills() {
                   <p className="text-gray-600 mt-4">{skill.extraDescription}</p>
                   <ul className="list-disc list-inside text-gray-700 mt-2">
                     {skill.extraItems &&
-                      skill.extraItems.map((item, idx) => (
-                        <li key={idx}>{item}</li>
+                      skill.extraItems.map((item, index) => (
+                        <li key={index}>{item}</li>
                       ))}
                   </ul>
                 </>

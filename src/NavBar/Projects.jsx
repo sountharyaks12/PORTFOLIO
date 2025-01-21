@@ -1,104 +1,73 @@
 import React from 'react';
+import todo from '../assets/todo2.png';
+import quiz from '../assets/quiz.png';
+import weather from '../assets/weather.png';
 
 export default function Projects() {
+    const projects = [
+        {
+            img: todo,
+            title: "To-Do List Application",
+            description: "A simple todo list application to manage your daily tasks + local storage integration",
+            skills: 'HTML, CSS, JavaScript',
+            view_output: 'https://sountharyaks12.github.io/To-Do-List/'
+        },
+        {
+            img: quiz,
+            title: "Quiz Application",
+            description: "A quiz app with timer-based progress tracking",
+            skills: 'HTML, CSS, JavaScript',
+            view_output: 'https://sountharyaks12.github.io/Quiz_App/'
+        },
+        {
+            img: weather,
+            title: "Weather App",
+            description: "A weather app that displays real-time weather data based on location",
+            skills: 'HTML, CSS, JavaScript, API',
+            view_output: 'https://sountharyaks12.github.io/Weather_App/'
+        }
+    ];
+
     return (
-        <div id="projects" className="bg-gray-50 py-10 px-5 md:px-20">
-            <h1 className="text-4xl font-extrabold text-center mb-10 text-gray-800">My Projects</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-                {/* todo list */}
-                <div className="relative bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <img src={"todo2.png"} alt="To-Do List Application" className="w-full h-48 object-cover" />
-                    <div className="p-5">
-                        <h2 className="text-xl font-bold text-gray-800 mb-2">To-Do List Application</h2>
-                        <p className="text-gray-700 text-sm mb-4">
-                            A simple to-do list application to manage your daily tasks + local storage integration.
-                        </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                HTML
-                            </span>
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                CSS
-                            </span>
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                JavaScript
-                            </span>
+        <div id="projects" className="bg-gray-200 flex py-10 px-5 md:px-20">
+            <div>
+                <h1 className="text-4xl font-extrabold text-center mb-10 text-gray-800">Projects</h1>
+
+                <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {projects.map((project, index) => (
+                        <div key={index} className="w-full rounded-2xl bg-white overflow-hidden shadow-lg flex flex-col">
+                            <img
+                                src={project.img}
+                                className="w-full object-center object-cover mb-4"
+                                alt={project.title}
+                            />
+
+                            <div className='px-4 pb-6 flex-1'>
+                                <h2 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h2>
+                                <p className="text-gray-600 text-sm mb-4">{project.description}</p>
+
+                                <div className='flex flex-wrap gap-3 mb-4'>
+                                    {project.skills.split(',').map((skill, index) => (
+                                        <span
+                                            key={index}
+                                            className="text-xs mb-4 font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full ">
+                                            {skill.trim()}
+                                        </span>
+                                    ))}
+                                </div>
+                                <a
+                                    href={project.view_output}
+                                    target="_blank"
+                                    className="text-white  bg-[#5F4E4A] px-4 py-2  
+                                rounded-md hover:bg-[#b9b0a5] hover:text-black hover:font-medium "
+                                >
+                                    View Output
+                                </a>
+                            </div>
                         </div>
-                        <a
-                            href="https://sountharyaks12.github.io/To-Do-List/"
-                            target="_blank"
-                            className="inline-block bg-[#5F4E4A] text-white text-sm px-4 py-2 rounded-lg hover:bg-[#b9b0a5] hover:text-black hover:font-medium"
-                        >
-                            View output
-                        </a>
-                    </div>
+                    ))}
                 </div>
 
-                {/* Quiz App */}
-                <div className="relative bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <img
-                        src={'quiz.png'}
-                        alt="Quiz Application"
-                        className="w-full h-48 object-cover"
-                    />
-                    <div className="p-5">
-                        <h2 className="text-xl font-bold text-gray-800 mb-2">Quiz Application</h2>
-                        <p className="text-gray-600 text-sm mb-4">
-                            A quiz app with timer based progress tracking.
-                        </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                HTML
-                            </span>
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                CSS
-                            </span>
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                JavaScript
-                            </span>
-                        </div>
-                        <a
-                            href="https://sountharyaks12.github.io/Quiz_App/"
-                            target="_blank"
-                            className="inline-block bg-[#5F4E4A] text-white text-sm px-4 py-2 rounded-lg hover:bg-[#b9b0a5] hover:text-black hover:font-medium"
-                        >
-                            View output
-                        </a>
-                    </div>
-                </div>
-
-                {/* Weather App*/}
-                <div className="relative bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <img
-                        src={"weather.png"}
-                        alt="Weather Application"
-                        className="w-full h-48 object-cover"
-                    />
-                    <div className="p-5">
-                        <h2 className="text-xl font-bold text-gray-800 mb-2">Weather Application</h2>
-                        <p className="text-gray-600 text-sm mb-4">
-                            A weather app that displays real time weather data based on location.
-                        </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                API
-                            </span>
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                JavaScript
-                            </span>
-                            <span className="text-xs font-medium bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
-                                CSS
-                            </span>
-                        </div>
-                        <a
-                            href="https://sountharyaks12.github.io/Weather_App/"
-                            target="_blank"
-                            className="inline-block text-center bg-[#5F4E4A] text-white text-sm px-4 py-2 rounded-lg hover:bg-[#b9b0a5] hover:text-black hover:font-medium"
-                        >
-                            View output
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     );

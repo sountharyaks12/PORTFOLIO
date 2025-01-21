@@ -4,8 +4,9 @@
 
 @layer utilities {
   .list-image-custom {
-    list-style-image: url('/2.jpg');
+    list-style-image: url('/star.jpg');
     list-style-position: inside;
     /* height: 20px; */
+    /* padding-left: 2em; */
   }
 }
