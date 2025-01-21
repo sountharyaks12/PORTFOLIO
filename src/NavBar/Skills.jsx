@@ -1,62 +1,87 @@
-import React from 'react'
-import { FaGlobe } from 'react-icons/fa'
-import { FaWandMagicSparkles } from 'react-icons/fa6'
-import { HiPaintBrush } from 'react-icons/hi2'
-import { IoServer, IoSettings } from 'react-icons/io5'
+import React from 'react';
+import { FaGlobe } from 'react-icons/fa';
+import { FaWandMagicSparkles } from 'react-icons/fa6';
+import { HiPaintBrush } from 'react-icons/hi2';
+import { IoServer, IoSettings } from 'react-icons/io5';
 
 export default function Skills() {
-  return (
-    <div className='flex justify-center '>
-      <div id='skills' className=' border-2 border-red-950 rounded-lg m-4 mt-6 md:m-16  p-5 '>
+  const skills = [
+    {
+      icon: <FaGlobe />,
+      title: 'Web Development',
+      description: 'Specialized in building web applications using technologies like:',
+      items: ['HTML5', 'CSS3', 'JavaScript'],
+      extraDescription: 'Familiar with frameworks and libraries such as:',
+      extraItems: ['React.js', 'Node.js', 'Express.js'],
+    },
+    {
+      icon: <HiPaintBrush />,
+      title: 'Styling Tools',
+      description: "Proficient in modern styling libraries and frameworks:",
+      items: ['Bootstrap 5', 'Tailwind CSS', 'Material UI', 'React Bootstrap'],
+    },
+    {
+      icon: <IoSettings />,
+      title: 'Programming Language',
+      description: 'Core technology for building scalable solutions:',
+      items: ['JavaScript (ES6+)'],
+    },
+    {
+      icon: <IoServer />,
+      title: 'Database Management',
+      description: 'Experienced in managing databases with:',
+      items: ['MongoDB'],
+    },
+    {
+      icon: <IoSettings />,
+      title: 'Tools & Platforms',
+      description: 'Skilled in using tools and platforms like:',
+      items: ['Git', 'GitHub'],
+    },
+    {
+      icon: <FaWandMagicSparkles />,
+      title: 'Other Skills',
+      description: 'Additionally skilled in:',
+      items: ['Responsive Web Design', 'Cross-Browser Compatibility'],
+    },
+  ];
 
-        <h1 className='text-3xl text-center mt-10 font-bold'>Skills</h1>
-        <h1 className='m-6 text-xl font-semibold '>MERN Full-Stack Development</h1>
-        <ul className='m-6 list-disc'>
-          <h1 className='text-lg font-semibold mb-5 flex '><span className='mr-2'><FaGlobe /></span>
-            <span className='-mt-1'>Web Development</span></h1>
-          <p className='font-serif'>I specialize in web development using technologies such as</p>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <p className='font-serif mt-2'>Expertise in framework and libraries like</p>
-          <li>React.js</li>
-          <li> Node.js</li>
-          <li>Express.js</li>
-        </ul>
-        <ul className='m-6 list-disc'>
-          <h1 className='text-lg font-semibold mb-5 flex'> <span className='mr-2 '><HiPaintBrush /> </span>
-            <span className='-mt-1' >Styling Tools</span> </h1>
-          <p className='font-serif'>I'm Proficient in styling tools including</p>
-          <li>Bootstrap5 </li>
-          <li>Tailwind CSS</li>
-          <li>Material UI</li>
-          <li>React Bootstrap</li>
-        </ul>
-        <ul className='m-6 list-disc'>
-          <h1 className='text-lg font-semibold mb-5 flex'> <span className=' mr-2'><IoSettings /></span>
-            <span className='-mt-1'>Programming Language </span> </h1>
-          <p className='font-serif'>Core Technology</p>
-          <li>Javascript </li>
-        </ul>
-        <ul className='m-6 list-disc'>
-          <h1 className='text-lg font-semibold mb-5 flex'><span className='mr-2'><IoServer /></span>
-            <span className='-mt-1'>Database Management</span> </h1>
-          <p className='font-serif'>My database management skills include working with</p>
-          <li>MongoDB </li>
-        </ul>
-        <ul className='m-6 list-disc'>
-          <h1 className='text-lg font-semibold mb-5 flex'> <span className='mr-2'><IoSettings /></span>
-            <span className='-mt-1'>Tools & Platform </span></h1>
-          <p className='font-serif'>I am experienced with tools like</p>
-          <li>Git, GitHub </li>
-        </ul>
-        <ul className='m-6 list-disc'>
-          <h1 className='text-lg font-semibold mb-5 flex'>
-            <span className='mr-2'><FaWandMagicSparkles /></span>
-            <span className='-mt-1'>Other Skills</span> </h1>
-          <p className='font-serif'>Additionally, I excel in creating</p>
-          <li>Responsive Web Design</li>
-        </ul>
+  return (
+    <div id='skills' className="flex justify-center  py-10 bg-">
+      <div className="w-full max-w-4xl  shadow-lg rounded-lg p-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800">Skills</h1>
+        <h2 className="text-lg font-medium text-center text-gray-600 mt-2">MERN Full-Stack Development</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="p-6 border border-gray-300 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 bg-gray-50"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 flex items-center">
+                <span className="text-[#383638] text-2xl mr-3">{skill.icon}</span>
+                {skill.title}
+              </h3>
+              <p className="text-gray-600 mt-3">{skill.description}</p>
+              <ul className="list-disc list-inside text-gray-700 mt-4">
+                {skill.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+              {skill.extraDescription && (
+                <>
+                  <p className="text-gray-600 mt-4">{skill.extraDescription}</p>
+                  <ul className="list-disc list-inside text-gray-700 mt-2">
+                    {skill.extraItems &&
+                      skill.extraItems.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                  </ul>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  )
+  );
 }

@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <div id="contact" className="m-4 flex justify-center items-center min-h-screen">
-      <div className="bg-yellow-50 shadow-lg rounded-lg p-8 max-w-md w-full">
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h2 className="text-2xl text-[#333] font-extrabold text-center mb-6">Contact Me</h2>
         <form ref={form} onSubmit={sendEmail} className="space-y-4">
           <div>
@@ -35,7 +35,7 @@ export default function Contact() {
             <input
               type="text"
               name="from_name"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full focus:outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Enter your name"
               required
             />
@@ -45,7 +45,7 @@ export default function Contact() {
             <input
               type="email"
               name="from_email"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full focus:outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Enter your email"
               required
             />
@@ -54,7 +54,7 @@ export default function Contact() {
             <label className="block text-sm font-medium text-gray-700">Message</label>
             <textarea
               name="message"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="mt-1 block w-full focus:outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               rows="4"
               placeholder="Enter your message"
               required
@@ -63,7 +63,7 @@ export default function Contact() {
           <div>
             <button
               type="submit"
-              className="w-full bg-pink-950 text-white py-2 px-4 rounded-md shadow  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="w-full bg-pink-950 focus:outline-none text-white py-2 px-4 rounded-md shadow "
             >
               Send
             </button>

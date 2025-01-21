@@ -48,9 +48,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex items-center h-[82vh] animate-fadeInUp sm:animate-none mt-4"> 
-        <div id="home" className="w-full mt-10">
-          <div className="flex justify-center flex-col-reverse lg:flex-row md:flex-col-reverse sm:flex-col-reverse xs:flex-col-reverse leading-loose items-center w-screen my-auto px-5">
+      <div className="flex items-center h-[82vh] animate-fadeInUp sm:animate-none mt-4">
+        <div id="home" className="w-full mt-5">
+          <div className="flex justify-center flex-col-reverse lg:flex-row md:flex-col-reverse sm:flex-col-reverse xs:flex-col-reverse leading-loose items-center w-screen mx-auto my-auto px-5">
             <div className="p-3 w-full lg:w-1/3 animate-slideLeft sm:animate-fadeInUp">
               <div className="text-center p-3 flex flex-wrap justify-center">
                 <div>
@@ -75,7 +75,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full h-40 lg:w-2/3 flex justify-center">
-              <img src="i.JPG" alt="Sountharya" className="rounded-full w-40 h-40 object-cover" />
+              <img src="i.JPG" alt="Sountharya" className="rounded-full w-44 h-44 object-cover" />
             </div>
           </div>
         </div>
