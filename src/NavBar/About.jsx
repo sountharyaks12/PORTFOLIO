@@ -3,7 +3,7 @@ import '../index.css'
 
 export default function About() {
     return (
-        <div id='about' className='min-h-screen text-center w-full rounded-lg bg-gray-50  mt-40 md:mt-10'>
+        <div id='about' className='min-h-screen text-center w-full rounded-lg bg-white  mt-40 md:mt-10'>
             <div className='p-8'>
                 <h2 className='text-3xl text-gray-900 font-bold mt-8'>About Me</h2>
 
