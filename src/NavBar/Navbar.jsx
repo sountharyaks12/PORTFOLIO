@@ -10,6 +10,7 @@ export default function Navbar() {
                 <Link to="skills" smooth={true} duration={500} className='cursor-pointer'>Skills</Link>
                 <Link to="projects" smooth={true} duration={500} className='cursor-pointer'>Projects</Link>
                 <Link to="contact" smooth={true} duration={500} className='cursor-pointer'>Contact</Link>
+                
             </div>
         </div>
     );

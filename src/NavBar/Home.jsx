@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
+import { IoCloudDownload } from 'react-icons/io5';
 import { Link } from 'react-scroll';
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
           <Link to="skills" smooth={true} duration={500} className="cursor-pointer">Skills</Link>
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer">Projects</Link>
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link>
+          <button className=' text-white font-medium '>
+            <a href="/Sountharya_Resume_(1)" download>Download My Resume</a>
+          </button>
         </div>
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
           <svg
@@ -45,6 +49,10 @@ export default function Home() {
           <Link to="skills" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Skills</Link>
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Projects</Link>
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Contact</Link>
+          <button className='bg-slate-950 flex items-center justify-between text-white font-medium py-2 px-4 rounded-lg w-fit'>
+          <span className=' mr-2'> <IoCloudDownload /></span>
+          <a href="/Sountharya_Resume_(1)" download>Download My Resume </a>
+          </button>
         </div>
       </div>
 
