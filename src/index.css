@@ -76,5 +76,10 @@
         background-position: bottom ; 
     }
 }
-
-  
+@layer utilities {
+  .list-image-custom {
+    list-style-image: url('/2.jpg');
+    list-style-position: inside;
+    /* height: 20px; */
+  }
+}
