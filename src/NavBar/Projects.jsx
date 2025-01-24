@@ -41,7 +41,7 @@ export default function Projects() {
             title: "Bootstrap UI",
             description: "Build an amazing UI with Bootstrap",
             skills: 'Bootstrap',
-            view_output: 'https://toys-mongodb-express-js-node-js.onrender.com/',
+            view_output: 'https://sountharyaks12.github.io/BOOTSRAP_PROJECT1/',
         },
     ];
 
