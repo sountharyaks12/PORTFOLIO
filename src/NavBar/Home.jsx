@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import resume from '../assets/Sountharya_Resume_(1).pdf';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
-import { IoCloudDownload } from 'react-icons/io5';
+// import { IoCloudDownload } from 'react-icons/io5';
 import { Link } from 'react-scroll';
+import { GrLinkBottom } from 'react-icons/gr';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,8 +53,8 @@ export default function Home() {
           <Link to="skills" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Skills</Link>
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Projects</Link>
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Contact</Link>
-          <button className="bg-[#6F42C1] flex items-center justify-between text-[#ffffff] font-medium py-2 px-3 rounded-lg w-fit ml-0">
-            <IoCloudDownload className="mr-1" />
+          <button className="bg-[#42c15e] flex items-center justify-between text-[#ffffff] font-medium py-2 px-3 rounded-lg w-fit ml-0">
+            <GrLinkBottom  className="mr-1" />
             <a href={resume} download='resume' >Resume</a>
           </button>
         </div>

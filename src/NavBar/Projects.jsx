@@ -1,8 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion'
+import { easeInOut, motion } from 'framer-motion'
 import todo from '../assets/todo2.png';
 import quiz from '../assets/quiz.png';
 import weather from '../assets/weather.png';
+import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 
 export default function Projects() {
     const projects = [
@@ -11,34 +12,38 @@ export default function Projects() {
             title: "To-Do List Application",
             description: "A simple todo list application to manage your daily tasks + local storage integration",
             skills: 'HTML, CSS, JavaScript',
-            view_output: 'https://sountharyaks12.github.io/To-Do-List/'
+            view_output: 'https://sountharyaks12.github.io/To-Do-List/',
+            code: 'https://github.com/sountharyaks12/To-Do-List'
         },
         {
             img: quiz,
             title: "Quiz Application",
             description: "A quiz app with timer-based progress tracking",
             skills: 'HTML, CSS, JavaScript',
-            view_output: 'https://sountharyaks12.github.io/Quiz_App/'
+            view_output: 'https://sountharyaks12.github.io/Quiz_App/',
+            code: 'https://github.com/sountharyaks12/Quiz_App'
         },
         {
             img: weather,
             title: "Weather App",
             description: "A weather app that displays real-time weather data based on location",
             skills: 'HTML, CSS, JavaScript, API',
-            view_output: 'https://sountharyaks12.github.io/Weather_App/'
+            view_output: 'https://sountharyaks12.github.io/Weather_App/',
+            code: 'https://github.com/sountharyaks12/Weather_App'
         }
     ];
 
     return (
         <div id="projects" className="bg-gray-200 flex py-10 px-5 md:px-20">
             <div>
-                < motion.h2 initial={{ opacity: 0, x: -100 }}
+                < motion.h2
+                    initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: [-150, 30, 0] }}
                     transition={{ duration: 1 }}
                     className="text-4xl font-extrabold text-center mt-10 text-gray-800">
                     Projects
                 </motion.h2>
-
+            
                 <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <motion.div
@@ -46,8 +51,8 @@ export default function Projects() {
                             initial={{ opacity: 0, y: -20 }}
                             whileInView={{
                                 opacity: 1, y: 20, transition: {
-                                    duration: 0.8,          
-                                    delay: index * 0.4,    
+                                    duration: 0.8,
+                                    delay: index * 0.2,
                                     ease: "easeInOut"
                                 }
                             }}
@@ -55,10 +60,9 @@ export default function Projects() {
                         >
                             <img
                                 src={project.img}
-                                className="w-full object-center object-cover mb-4"
+                                className="w-full object-center hover:bg-clip-text- object-cover mb-4"
                                 alt={project.title}
                             />
-
                             <div className="px-4 pb-6 flex-1">
                                 <h2 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h2>
                                 <p className="text-gray-600 text-sm mb-4">{project.description}</p>
