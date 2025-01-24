@@ -47,7 +47,7 @@ export default function Projects() {
                             whileInView={{
                                 opacity: 1, y: 20, transition: {
                                     duration: 0.8,          
-                                    delay: index * 0.8,    
+                                    delay: index * 0.4,    
                                     ease: "easeInOut"
                                 }
                             }}
