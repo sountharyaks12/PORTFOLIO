@@ -1,5 +1,3 @@
-
-//App.jsx
 import React from 'react'
 // import Navbar from './NavBar/Navbar'
 import Home from './NavBar/Home'

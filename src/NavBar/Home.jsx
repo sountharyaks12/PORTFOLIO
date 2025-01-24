@@ -22,8 +22,8 @@ export default function Home() {
           <Link to="skills" smooth={true} duration={500} className="cursor-pointer">Skills</Link>
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer">Projects</Link>
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link>
-          <button className="text-white font-medium hover:text-indigo-400 hover:scale-105">
-            <a href={resume} download='resume' >Download Resume</a>
+          <button className="text-white font-medium  active:scale-95 hover:scale-105">
+            <a href={resume} download='resume' >Download CV</a>
           </button>
         </div>
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
@@ -52,9 +52,9 @@ export default function Home() {
           <Link to="skills" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Skills</Link>
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Projects</Link>
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Contact</Link>
-          <button className="bg-pink-950 flex items-center justify-between text-white font-medium py-2 px-4 rounded-lg w-fit">
-            <IoCloudDownload className="mr-2" />
-            <a href={resume} download='resume' >Download My Resume</a>
+          <button className="bg-[#6F42C1] flex items-center justify-between text-[#ffffff] font-medium py-2 px-3 rounded-lg w-fit ml-0">
+            <IoCloudDownload className="mr-1" />
+            <a href={resume} download='resume' >Resume</a>
           </button>
         </div>
       </div>
@@ -73,6 +73,7 @@ export default function Home() {
                 <a
                   href="https://github.com/sountharyaks12"
                   aria-label="GitHub"
+                  target='_blank'
                   className="p-4 bg-gray-200 text-black rounded-full text-3xl shadow-lg hover:bg-indigo-950 hover:text-white transition-all"
                 >
                   <FaGithub />
@@ -80,6 +81,7 @@ export default function Home() {
                 <a
                   href="https://www.linkedin.com/in/sountharya-k-s-604a9b282/"
                   aria-label="LinkedIn"
+                  target='_blank'
                   className="p-4 bg-gray-200 text-black rounded-full text-3xl shadow-lg hover:bg-indigo-950 hover:text-white transition-all"
                 >
                   <FaLinkedin />
@@ -87,6 +89,7 @@ export default function Home() {
                 <a
                   href="mailto:ssountharya71@gmail.com"
                   aria-label="Email"
+                  target='_blank'
                   className="p-4 bg-gray-200 text-black rounded-full text-3xl shadow-lg hover:bg-indigo-950 hover:text-white transition-all"
                 >
                   <IoMdMail />
