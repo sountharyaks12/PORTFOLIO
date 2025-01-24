@@ -79,7 +79,7 @@ export default function Contact() {
                   type="submit"
                   className="w-full bg-pink-950 focus:outline-none text-white py-2 px-4 rounded-md shadow "
                 >
-                  <input type="submit" value="Send" />
+                  <input type="submit" className='bg-pink-950' value="Send" />
                   
                 </button>
                 <div>
