@@ -40,7 +40,7 @@ export default function Contact() {
                 <input
                   type="text"
                   name="from_name"
-                  className="mt-1 block w-full focus:outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full focus:outline-none border-0 shadow-sm sm:text-sm"
                   placeholder="Enter your name"
                   required
                 />
@@ -50,7 +50,7 @@ export default function Contact() {
                 <input
                   type="email"
                   name="from_email"
-                  className="mt-1 block w-full focus:outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full focus:outline-none  border-0 shadow-sm sm:text-sm"
                   placeholder="Enter your email"
                   required
                 />
@@ -59,7 +59,7 @@ export default function Contact() {
                 <label className="block text-sm font-medium text-gray-700">Message</label>
                 <textarea
                   name="message"
-                  className="mt-1 block w-full focus:outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  className="mt-1 block w-full focus:outline-none border-0 shadow-sm sm:text-sm"
                   rows="4"
                   placeholder="Enter your message"
                   required

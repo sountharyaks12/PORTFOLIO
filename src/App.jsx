@@ -8,14 +8,13 @@ import Projects from './NavBar/Projects'
 
 export default function App() {
   return (
-    <div className='bg-[#d6d0ca]' >
+    <div className='bg-[#d6d0ca] overflow-hidden' >
       {/* <Navbar /> */}
       <Home />
       <About />
       <Skills />
       <Projects />
-<Contact />
-
+      <Contact />
 
     </div>
   )
