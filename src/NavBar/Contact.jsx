@@ -8,11 +8,9 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm('service_yzefnh9', 'template_ax1rnt8', form.current, {
-        publicKey: 'J1hrIP4b5aR9ncADB',
-      })
+    emailjs.sendForm('service_fgtno8g', 'template_sa04pth', form.current, {
+      publicKey: 'bCzj7164HmBrsnbSH',
+    })
       .then(
         () => {
           console.log('SUCCESS!');
@@ -39,17 +37,10 @@ export default function Contact() {
         <div className='flex lg:flex-row xs:flex-col'>
           <div
             className='flex justify-center items-center lg:ml-40 '>
-            <motion.img
-              initial={{
-                opacity: 1,
-                rotate: 20,
-              }}
-              transition={{
-                delay: 0.2
-                , duration: 0.6, type: 'spring', stiffness: 300, damping: 10
-              }}
+            <motion.img initial={{ opacity: 1, rotate: 20, }}
+              transition={{ delay: 0.2, duration: 0.6, type: 'spring', stiffness: 300, damping: 10 }}
               whileInView={{ opacity: 1, rotate: 360 }}
-              src="contactMe.png" className=' lg:scale-125 xs:scale-100' alt="contact me image" />
+              src="contactMe.png" className=' lg:scale-150 xs:scale-100' alt="contact me image" />
           </div>
           <div className='flex items-center w-full '>
             <form ref={form} onSubmit={sendEmail} className=" space-y-4  lg:px-20 py-10 w-full">
@@ -58,7 +49,7 @@ export default function Contact() {
                 <input
                   type="text"
                   name="from_name"
-                  className="mt-1 block w-full focus:outline-none border-0 sm:text-sm"
+                  className="mt-1 block w-full focus:outline-none border-2 border-gray-600 p-2 rounded-lg sm:text-sm"
                   placeholder="Enter your name"
                   required
                 />
@@ -68,7 +59,7 @@ export default function Contact() {
                 <input
                   type="email"
                   name="from_email"
-                  className="mt-1 block w-full focus:outline-none  border-0 sm:text-sm"
+                  className="mt-1 block w-full focus:outline-none  border-2 border-gray-600 p-2 rounded-lg sm:text-sm"
                   placeholder="Enter your email"
                   required
                 />
@@ -77,18 +68,19 @@ export default function Contact() {
                 <label className="block text-sm font-medium text-gray-700">Message</label>
                 <textarea
                   name="message"
-                  className="mt-1 block w-full focus:outline-none border-0 sm:text-sm"
+                  className="mt-1 block w-full focus:outline-none border-2 border-gray-600 p-2 rounded-lg sm:text-sm"
                   rows="4"
                   placeholder="Enter your message"
                   required
                 />
               </div>
               <div>
-                <button
+                <button 
                   type="submit"
                   className="w-full bg-pink-950 focus:outline-none text-white py-2 px-4 rounded-md shadow "
                 >
-                  Send
+                  <input type="submit" value="Send" />
+                  
                 </button>
                 <div>
                   {msg && <p className="text-center text-sm mt-4 text-gray-600">{msg}</p>}

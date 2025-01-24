@@ -88,7 +88,7 @@ export default function Home() {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="mailto:ssountharya71@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=ssountharya71@gmail.com"
                   aria-label="Email"
                   target='_blank'
                   className="p-4 bg-gray-200 text-black rounded-full text-3xl shadow-lg hover:bg-indigo-950 hover:text-white transition-all"
