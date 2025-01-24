@@ -1,9 +1,10 @@
 import React from 'react';
-import { easeInOut, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import todo from '../assets/todo2.png';
 import quiz from '../assets/quiz.png';
 import weather from '../assets/weather.png';
-import { FaExternalLinkSquareAlt } from 'react-icons/fa';
+import toys from '../assets/toys1.png'
+import bootstrap from '../assets/bootstrap.png'
 
 export default function Projects() {
     const projects = [
@@ -13,7 +14,6 @@ export default function Projects() {
             description: "A simple todo list application to manage your daily tasks + local storage integration",
             skills: 'HTML, CSS, JavaScript',
             view_output: 'https://sountharyaks12.github.io/To-Do-List/',
-            code: 'https://github.com/sountharyaks12/To-Do-List'
         },
         {
             img: quiz,
@@ -21,7 +21,6 @@ export default function Projects() {
             description: "A quiz app with timer-based progress tracking",
             skills: 'HTML, CSS, JavaScript',
             view_output: 'https://sountharyaks12.github.io/Quiz_App/',
-            code: 'https://github.com/sountharyaks12/Quiz_App'
         },
         {
             img: weather,
@@ -29,8 +28,21 @@ export default function Projects() {
             description: "A weather app that displays real-time weather data based on location",
             skills: 'HTML, CSS, JavaScript, API',
             view_output: 'https://sountharyaks12.github.io/Weather_App/',
-            code: 'https://github.com/sountharyaks12/Weather_App'
-        }
+        },
+        {
+            img: toys,
+            title: "Toys App",
+            description: "A app built with MongoDB, allowing users to easily add, delete, and view toy products.",
+            skills: 'EJS,CSS,Javascript,Express.js,Mongoose',
+            view_output: 'https://toys-mongodb-express-js-node-js.onrender.com/',
+        },
+        {
+            img: bootstrap,
+            title: "Bootstrap UI",
+            description: "Build an amazing UI with Bootstrap",
+            skills: 'Bootstrap',
+            view_output: 'https://toys-mongodb-express-js-node-js.onrender.com/',
+        },
     ];
 
     return (
@@ -43,7 +55,7 @@ export default function Projects() {
                     className="text-4xl font-extrabold text-center mt-10 text-gray-800">
                     Projects
                 </motion.h2>
-            
+
                 <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <motion.div
@@ -60,7 +72,7 @@ export default function Projects() {
                         >
                             <img
                                 src={project.img}
-                                className="w-full object-center hover:bg-clip-text- object-cover mb-4"
+                                className="w-full h-52 object-center hover:bg-clip-text- object-cover mb-4"
                                 alt={project.title}
                             />
                             <div className="px-4 pb-6 flex-1">
