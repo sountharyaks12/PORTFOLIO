@@ -29,12 +29,12 @@ export default function Contact() {
       <div className="bg-white shadow-lg rounded-lg p-8  w-full">
         <h2 className="text-2xl text-[#333] font-extrabold text-center mb-6">Contact Me</h2>
 
-        <div className='flex lg:flex-row sm:flex-col'>
+        <div className='flex lg:flex-row xs:flex-col'>
           <div className='flex justify-center items-center lg:ml-40 '>
-            <img src="contactMe.png" className=' lg:scale-125 ' alt="contact me image" />
+            <img src="contactMe.png" className=' lg:scale-125 xs:scale-100' alt="contact me image" />
           </div>
           <div className='flex items-center w-full '>
-            <form ref={form} onSubmit={sendEmail} className=" space-y-4 px-20 py-10 w-8/12">
+            <form ref={form} onSubmit={sendEmail} className=" space-y-4  lg:px-20 py-10 w-full">
               <div>
                 <label className="block text-sm font-medium text-gray-700">Name</label>
                 <input
