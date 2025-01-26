@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* about page */
 @layer utilities {
   .list-image-custom {
     list-style-image: url('/star.jpg');
     list-style-position: inside;
-    /* height: 20px; */
-    /* padding-left: 2em; */
   }
+}
+  
+/* home page   */
+.txt-bold:hover {
+  font-weight: 600;
+  text-underline-position: below;
+  text-underline-offset: 15px;
+  text-decoration: underline;
+
 }

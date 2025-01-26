@@ -35,22 +35,15 @@ export default function Projects() {
             description: "A app built with MongoDB, allowing users to easily add, delete, and view toy products.",
             skills: 'EJS,CSS,Javascript,Express.js,Mongoose',
             view_output: 'https://toys-mongodb-express-js-node-js.onrender.com/',
-        },
-        {
-            img: bootstrap,
-            title: "Bootstrap UI",
-            description: "Build an amazing UI with Bootstrap",
-            skills: 'Bootstrap',
-            view_output: 'https://sountharyaks12.github.io/BOOTSRAP_PROJECT1/',
-        },
+        }
     ];
 
     return (
         <div id="projects" className="bg-gray-200 flex py-10 px-5 md:px-20">
             <div>
                 < motion.h2
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: [-150, 30, 0] }}
+                    initial={{ scale: 0.5, x: -100 }}
+                    whileInView={{ scale: 1, x: [-150, 30, 0] }}
                     transition={{ duration: 1 }}
                     className="text-4xl font-extrabold text-center mt-10 text-gray-800">
                     Projects
@@ -63,16 +56,22 @@ export default function Projects() {
                             initial={{ opacity: 0, y: -20 }}
                             whileInView={{
                                 opacity: 1, y: 20, transition: {
-                                    duration: 0.8,
+                                    duration: 0.5,
                                     delay: index * 0.2,
-                                    ease: "easeInOut"
+                                    ease: "easeOut",
+                                    
+                                },
+                                transition:{
+                                    type:"spring",
+                                stiffness:100,
+                                delay: index * 0.2,
                                 }
                             }}
                             className="w-full rounded-2xl bg-white overflow-hidden mt-16 shadow-lg flex flex-col"
                         >
                             <img
                                 src={project.img}
-                                className="w-full h-52 object-center hover:bg-clip-text- object-cover mb-4"
+                                className="w-full h-52 hover:scale-105 transition-all object-center hover:bg-clip-text- object-cover mb-4"
                                 alt={project.title}
                             />
                             <div className="px-4 pb-6 flex-1">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { easeIn, easeInOut, motion } from 'framer-motion'
+import { easeIn, easeInOut, mirrorEasing, motion, useVelocity } from 'framer-motion'
 import { FaGlobe } from 'react-icons/fa';
 import { FaWandMagicSparkles } from 'react-icons/fa6';
 import { HiPaintBrush } from 'react-icons/hi2';
@@ -52,16 +52,44 @@ export default function Skills() {
       <div className="w-full max-w-4xl  shadow-lg rounded-lg p-8">
         <motion.h1 initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: [-130, 30, 0] }}
-          transition={{ duration: 1, ease: easeInOut }}
+          transition={{ duration: .8, ease: easeInOut }}
           className="text-4xl font-bold text-center text-gray-800">
           Skills
         </motion.h1>
-        <h2 className="text-lg font-medium text-center text-gray-600 mt-2">MERN Full-Stack Development</h2>
+        <motion.h2 initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: [-130, 30, 0] }}
+          transition={{ duration: 1, ease: easeInOut }} className="text-lg font-medium text-center text-gray-600 mt-2">
+          MERN Full-Stack Development
+        </motion.h2>
         <motion.div initial={{ opacity: 0, x: 200 }}
           whileInView={{ opacity: 1, x: [100, 20, 0] }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 ">
           {skills.map((skill, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, x:index % 3 === 1 ? [-150,-100]:[130,100] ,y:index % 2 === 0 ? [90,60,20] :[50,-100] }}
+              animate={{
+                opacity:1,
+                x:0,
+                y:0,
+                // duration:1.2,
+                
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                y: 0,
+              }}
+              transition={{
+                duration: 1.2,
+              delay: index * .4,
+              type:"spring",
+              stiffness:100,
+              damping:10,
+              repeatType:'loop',
+              }}
+              viewport={{ once: false, amount:"all",margin: "-150px 0px" }}
+              
+
               key={index}
               className="p-6 border border-gray-300 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 bg-gray-50"
             >
@@ -102,7 +130,7 @@ export default function Skills() {
                   </ul>
                 </motion.div>
               )}
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div >

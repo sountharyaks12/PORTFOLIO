@@ -5,6 +5,8 @@ import { IoMdMail } from 'react-icons/io';
 // import { IoCloudDownload } from 'react-icons/io5';
 import { Link } from 'react-scroll';
 import { GrLinkBottom } from 'react-icons/gr';
+import { motion } from 'framer-motion';
+import '../index.css'
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,19 +15,83 @@ export default function Home() {
     setIsOpen(!isOpen);
   };
 
+  const text = "Sountharya K S";
+
+  const navItems = [
+    { to: "about", label: "About" },
+    { to: "skills", label: "Skills" },
+    { to: "projects", label: "Projects" },
+    { to: "contact", label: "Contact" },
+  ];
+
   return (
     <>
       {/* Navbar */}
       <div className="flex justify-between items-center text-white px-4 bg-[#5F4E4A] h-16">
-        <a href="/" className="text-lg font-bold">Sountharya K S</a>
+
+        <motion.h1 className="text-xl font-bold">
+          {text.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, x: 10 }}
+
+              whileInView={{
+                opacity: 1,
+                x: 0, transition: {
+                  delay: index * 0.1,
+                  duration: 0.6,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 5,
+                }
+              }}
+
+            >
+              {char}
+            </motion.span>
+          ))}
+        </motion.h1>
+
         <div className="hidden md:flex space-x-6">
-          <Link to="about" smooth={true} duration={500} className="cursor-pointer">About</Link>
+          {/* <Link   to="about" smooth={true} duration={500} className="cursor-pointer">About</Link>
           <Link to="skills" smooth={true} duration={500} className="cursor-pointer">Skills</Link>
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer">Projects</Link>
-          <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link>
-          <button className="text-white font-medium  active:scale-95 hover:scale-105">
-            <a href={resume} download='resume' >Download CV</a>
+          <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link> */}
+
+          <nav className="flex justify-center p-4 gap-7">
+            {navItems.map((item, index) => (
+              <motion.div
+                key={item.to}
+                initial={{ x: 200, opacity: 0 }}
+                animate={{
+                  x: 0, opacity: 1,
+                  transition: {
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10,
+                    delay: index * 0.2,
+                  }
+                }} className="cursor-pointer  "
+              >
+                <Link
+                  to={item.to}
+                  smooth={true}
+                  duration={500}
+                  className="text-white txt-bold "
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
+          <button className="text-white font-medium active:scale-95 hover:scale-105">
+            <motion.a initial={{ opacity: 0, x: 200 }} whileInView={{
+              opacity: 1, x: 0,
+              transition: { type: "spring", stiffness: 100, damping: 10 }
+            }}
+              href={resume} className='text-white' download='resume' >Download CV</motion.a>
           </button>
+
         </div>
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
           <svg
@@ -54,7 +120,7 @@ export default function Home() {
           <Link to="projects" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Projects</Link>
           <Link to="contact" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMenu}>Contact</Link>
           <button className="bg-[#42c15e] flex items-center justify-between text-[#ffffff] font-medium py-2 px-3 rounded-lg w-fit ml-0">
-            <GrLinkBottom  className="mr-1" />
+            <GrLinkBottom className="mr-1" />
             <a href={resume} download='resume' >Resume</a>
           </button>
         </div>
@@ -71,30 +137,30 @@ export default function Home() {
                 Aspiring MERN Full-Stack Developer | Passionate About Creating Dynamic Websites
               </p>
               <div className="flex justify-center lg:justify-start gap-4">
-                <a
+                <motion.a
                   href="https://github.com/sountharyaks12"
                   aria-label="GitHub"
                   target='_blank'
                   className="p-4 bg-gray-200 text-black rounded-full text-3xl shadow-lg hover:bg-indigo-950 hover:text-white transition-all"
                 >
                   <FaGithub />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href="https://www.linkedin.com/in/sountharya-k-s-604a9b282/"
                   aria-label="LinkedIn"
                   target='_blank'
                   className="p-4 bg-gray-200 text-black rounded-full text-3xl shadow-lg hover:bg-indigo-950 hover:text-white transition-all"
                 >
                   <FaLinkedin />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=ssountharya71@gmail.com"
                   aria-label="Email"
                   target='_blank'
                   className="p-4 bg-gray-200 text-black rounded-full text-3xl shadow-lg hover:bg-indigo-950 hover:text-white transition-all"
                 >
                   <IoMdMail />
-                </a>
+                </motion.a>
               </div>
             </div>
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import '../index.css'
 import { easeInOut, motion } from 'framer-motion'
-import { easeOut } from 'framer-motion/dom';
 
 export default function About() {
     return (
@@ -33,9 +32,9 @@ export default function About() {
                         whileInView={{
                             opacity: 1, x: [100,10],
                             transition: {
-                                duration: .7,
+                                duration: .5,
                                 ease: 'easeOut', 
-                                delay: 0.8
+                                delay: 0.4
                             }
                         }}
                         className='text-lg text-gray-700'>
